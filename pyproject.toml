@@ -1,19 +1,16 @@
 [tool.poetry]
 name = "pursue-scikithep"
-version = "0.1.0"
-description = ""
+version = "0.2.0"
+description = "Scikit-HEP tutorial for PURSUE @ FNAL"
 authors = ["roy <roy.cruz@upr.edu>"]
 readme = "README.md"
-packages = [{include = "pursue_scikithep"}]
 
 [tool.poetry.dependencies]
-python = "3.11.*"
+python = "^3.9"
 scikit-hep = "^2024.3.1"
-scikit-hep-testdata = "^0.4.43"
-numpy = "^1.26.4"
-matplotlib = "^3.8.4"
-pandas = "^2.2.1"
+jupyter = "^1.0.0"
 ipykernel = "^6.29.4"
+scikit-hep-testdata = "^0.4.43"
 awkward-pandas = "^2023.8.0"
 
 
