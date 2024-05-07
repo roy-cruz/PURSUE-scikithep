@@ -1,3 +1,0 @@
-# Introduction
-
-In this session, we will be introducing [Scikit-HEP project](https://scikit-hep.org/), a collection of packaged for HEP analysis. We will be starting with the basics: Uproot, a library which offers us I/O tools for root files, written purely in Python and Numpy. For this, we will be going through the HSF Uproot Tutorial which you can find [here](https://masonproffitt.github.io/uproot-tutorial/). Afterwards, we will be looking at other packages by going through the [HSF Scikit-HEP Tutorial](https://hsf-training.github.io/hsf-training-scikit-hep-webpage/) together. 

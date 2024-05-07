@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pursue-scikithep"
-version = "0.2.0"
+version = "0.2.0"poetr
 description = "Scikit-HEP tutorial for PURSUE @ FNAL"
 authors = ["roy <roy.cruz@upr.edu>"]
 readme = "README.md"
