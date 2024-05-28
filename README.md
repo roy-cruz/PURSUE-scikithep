@@ -1,70 +1,101 @@
 # PURSUE Scikit-HEP Workshop
-This repository holds all of the material & links which will be used in the PURSUE Scikit-HEP tutorial. To guide the learning process, we will be utilizing the following material kindly provided by HSF:
+This repository holds the lecture notes that will be used in the PURSUE Scikit-HEP tutorial. To guide the learning process, we will be utilizing the following material kindly provided by HSF:
 * [HSF Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) 
 * [HSF Scikit-HEP Tutorial](https://hsf-training.github.io/hsf-training-scikit-hep-webpage/).
 
+In addition, some materials were sourced from the CoDaS-HEP 2023 Columnar Data Analysis Session by Ioana Ifrim and Jim Pivarski which can be accessed [here](https://github.com/ioanaif/columnar-data-analysis-codas-hep-2023).
+
 # Setup
 
-## LPC 
+## CMSLPC Cluster
 
-We can set up a CMSSW environment with all of the neccesary tools we need. For this, connect to the LPC Cluster using the following command
+First, connect to the LPC cluster by running the following command.
 
 ```bash
-ssh -Y <user>@cmsplc-el8.fnal.gov -L 8888:localhost:8888
+ssh -L 8888:localhost:8888 <fermi_user>@cmslpc-el9.fnal.gov
 ```
 
-After connecting, run the following set of commands
+Next, run the following command to setup a directory where you will work.
+
 ```bash
-mkdir -p ~/nobackup/pursue-scikithep/
-cd ~/nobackup/pursue-scikithep/
+mkdir ~/nobackup/PURSUE-scikithep
+cd ~/nobackup/PURSUE-scikithep
+```
+
+We now create the environment we will be using. To do this, run the following commands.
+
+```bash
+source /cvmfs/cms.cern.ch/cmsset_default.sh
+cmsrel CMSSW_14_1_0_pre3
+cd CMSSW_14_1_0_pre3/src
+cmsenv
+scram-venv
+cmsenv
+```
+
+To clone this repository using the following commands
+
+```bash
 git clone git@github.com:roy-cruz/PURSUE-scikithep.git
-cmsrel CMSSW_12_4_20
-cd CMSSW_12_4_20; cmsenv; cd -
 cd PURSUE-scikithep
-jupyter notebook --no-browser --port=8888
 ```
 
-Paste the link that appears in your browser and you are ready to go!
-
-## Virtual Environment
-
-In your working directory, clone this repository by running the following command.
+Proceed to open Jupyter Lab by running.
 
 ```bash
-git clone git@github.com:roy-cruz/PURSUE-scikithep.git
+pip3 install jupyterlab
+jupyter lab --no-browser --port=8888
 ```
 
-Next, create the required virtual environment by running the following commands
+Navigate to the link that appears in your terminal once it finishes starting up.
 
+## Local
+
+If you prefer working locally, you can use either pip or conda to setup your environment.
+
+### Using `venv` and `pip3`
+In your working directory, create a virtual environment by running
 ```bash
-python3 -m virtualenv venv
-source ./venv/bin/activate
-pip3 install poetry
-cd PURSUE-scikithep
-poetry install --no-root
+python -m venv venv
 ```
-
-Once everything finishes installing, go ahead and start up a Jupyter session by running
-
-```bash
-jupyter notebook --no-browser
-```
-
-and copy the given link into your browser.
-
-
-
-<!-- * Hitting the `.` button.
-* Clicking [here](https://github.dev/roy-cruz/PURSUE-scikithep).
-
-Once the page loads, click on the blue "GitHub" button on the bottom left, and select "Continue Working in GitHub Codespaces" in the drop down menu that appears. Once your Codespace finishes loading, open the terminal (upper right corner), and run the following commands to create a virtual environment with all of the required packages
+and activate this environment by doing
 
 ```bash
-python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
 ```
 
-All set! Now you can run the included notebooks in addition to any notebook you wish to create to work in.
+Now clone the repository, and install the dependencies specified in the `requirements.txt` file.
 
-## Google Colab -->
+```bash
+git clone git@github.com:roy-cruz/PURSUE-scikithep.git
+cd PURSUE-scikithep
+pip3 install -r requirements.txt
+```
+
+Finally, start up Jupyter Lab and navigate to the link it provides you.
+
+```bash
+jupyter lab --no-browser
+```
+
+### Using Conda
+
+To make an environment in conda with all of the required libraries, just run the following commands in your working directory (Note: This may take a long time.)
+
+```bash
+git clone git@github.com:roy-cruz/PURSUE-scikithep.git
+cd PURSUE-scikithep
+conda env create -f environment.yml
+```
+
+After everything is done installing, activate the environment you just created by running
+
+```bash
+conda activate pursue-scikithep-2024
+```
+
+Start up Jupyter Lab by running
+```bash
+jupyter lab --no-browser
+```
+and navigate to the link that it provides you once it starts up.

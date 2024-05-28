@@ -1,2 +1,4 @@
+.DS_Store
 *.root
-.ipynb_checkpoints
+pursue-scikithep-book/_build
+*.lock

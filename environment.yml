@@ -1,0 +1,15 @@
+name: pursue-scikithep-2024
+channels:
+  - conda-forge
+dependencies:
+  - scikit-hep==2024.3.1
+  - jupyterlab==3.6.4
+  - matplotlib==3.7.1
+  - numpy==1.24.3
+  - pandas==2.0.3
+  - pip==22
+  - python==3.10
+  - xrootd==5.5.3
+  - pip:
+      - particle==0.23.0
+      - vector==1.1.0
