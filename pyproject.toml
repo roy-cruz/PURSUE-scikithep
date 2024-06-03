@@ -16,6 +16,8 @@ fsspec-xrootd = "^0.3.0"
 xrootd = "^5.6.9"
 h5py = "^3.11.0"
 js = "^1.0"
+requests = "^2.32.3"
+aiohttp = "^3.9.5"
 
 [tool.poetry.group.dev.dependencies]
 jupyter-book = "^1.0.0"
