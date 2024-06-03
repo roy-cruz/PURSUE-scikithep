@@ -1,5 +1,5 @@
-# PURSUE Scikit-HEP Workshop
-This repository holds the lecture notes that will be used in the PURSUE Scikit-HEP tutorial. To guide the learning process, we will be utilizing the following material kindly provided by HSF:
+# PURSUE Scikit-HEP Session
+This repository holds the lecture notes that will be used in the PURSUE Scikit-HEP tutorial. The notes are based on the following material:
 * [HSF Scikit-HEP Tutorial](https://hsf-training.github.io/hsf-training-scikit-hep-webpage/)
 * [CoDaS-HEP 2023 Columnar Data Analysis Session](https://github.com/ioanaif/columnar-data-analysis-codas-hep-2023) (Project notebook)
 * [HSF Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) 
